@@ -12,8 +12,16 @@ class Coin {
         for (int i = 0; i < coinType.length; i++){
             cnt = 0;
             if (money >= coinType[i]){
+                //몫과 나머지를 활용
+                //몫
                 cnt = money / coinType[i];
-                money -= coinType[i] * cnt;
+                //나머지 연산이 중요
+                money %= coinType[i];
+
+                //내 풀이
+                // money -= coinType[i] * cnt;
+                //생각해보니 얘는 연산이 두 번 이뤄져서 나머지로 연산하는 것이 더 나을 듯하다!
+
                 System.out.println(coinType[i] + "원 " + cnt + "개");
             } else{
                 System.out.println(coinType[i] + "원 " + cnt + "개");
