@@ -4,11 +4,8 @@ import java.util.Scanner;
 
 class Coin {
     private int[] coinType = {50000, 10000, 5000, 1000, 500, 100, 50, 10};
-    private int[] coinTypeCnt;
     private int cnt;
-    public Coin () {
-        coinTypeCnt = new int[coinType.length];
-    }
+    public Coin () {}
 
     public void payCount(int money) {
 
@@ -33,6 +30,5 @@ public class CoinTest {
         System.out.print("금액을 넣으세요 : ");
         int money = sc.nextInt();
         machine.payCount(money);
-
     }
 }
