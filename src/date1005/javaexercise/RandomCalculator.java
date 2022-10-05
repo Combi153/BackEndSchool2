@@ -32,4 +32,15 @@ public class RandomCalculator implements RandomNumberMaker{
             return a / (double)b;
         }
     }
+    public double div2(){
+        try{
+            if (b == 0){
+                throw new ArithmeticException();
+            }
+            return a / (double) b;
+        } catch (ArithmeticException e){
+            System.out.println("0으로 나눌 수 없습니다.");
+            return 0;
+        }
+    }
 }

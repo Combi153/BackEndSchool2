@@ -7,5 +7,6 @@ public class RandomCalculatorMain {
         System.out.println(ranCalc.sub());
         System.out.println(ranCalc.mul());
         System.out.println(ranCalc.div());
+        System.out.println(ranCalc.div2());
     }
 }
