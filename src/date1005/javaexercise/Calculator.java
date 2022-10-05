@@ -18,7 +18,7 @@ public class Calculator {
         if(b == 0){
             return ERROR;
         } else{
-            return a + b;
+            return a / (double)b;
         }
     }
 }
