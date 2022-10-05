@@ -1,4 +1,4 @@
-package date1005.javaexercise;
+package date1005.calculator;
 
 public class Calculator2 {
     private final int ERROR = -99999999;

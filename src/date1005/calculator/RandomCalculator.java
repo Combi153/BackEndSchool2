@@ -1,4 +1,4 @@
-package date1005.javaexercise;
+package date1005.calculator;
 
 public class RandomCalculator implements RandomNumberMaker{
 

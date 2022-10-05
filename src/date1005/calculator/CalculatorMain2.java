@@ -1,4 +1,4 @@
-package date1005.javaexercise;
+package date1005.calculator;
 
 public class CalculatorMain2 {
     public static void main(String[] args) {
