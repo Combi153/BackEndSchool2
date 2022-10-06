@@ -5,11 +5,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-class ReadNLetter {
+class ReadFile {
     private BufferedReader bufferedReader;
     private int bufferSize;
 
-    public ReadNLetter(String filename) {
+    public ReadFile(String filename) {
         try {
             this.bufferSize = 16 * 1024;
             this.bufferedReader = new BufferedReader(new FileReader(filename), bufferSize);
@@ -22,9 +22,9 @@ class ReadNLetter {
     }
 }
 
-public class ReadNLetterMain {
+public class ReadFileMain {
     public static void main(String[] args) throws IOException {
-        ReadNLetter readNLetter = new ReadNLetter("afile.txt");
+        ReadFile readNLetter = new ReadFile("afile.txt");
         BufferedReader reader = readNLetter.getBufferedReader();
         String str;
         while((str = reader.readLine()) != null){
