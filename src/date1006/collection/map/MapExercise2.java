@@ -5,10 +5,10 @@ import java.util.*;
 public class MapExercise2 {
     public static void main(String[] args) {
         HashMap<String, Integer> alphabetCntMap = new HashMap<>();
-        String repoAddr = "https://github.com/Combi153/BackEndSchool2.git";         // 깃허브 주소 문자열 초기화
+        String repoAddr = "https://github.com/Combi153/BackEndSchool2.git";          // 깃허브 주소 문자열 초기화
         String[] alphabetList = repoAddr.split("");                           // 문자열 String 배열로 초기화
-        Set<String> wordSet = new HashSet<String>(Arrays.asList(alphabetList));     // String 배열을 Set 으로 초기화
-        Set<String> alphabetSet = new HashSet<String>();                            // 대문자 알파벳 -> 소문자 알파벳, 특수문자 제외를 위해 빈 Set 초기화
+        Set<String> wordSet = new HashSet<String>(Arrays.asList(alphabetList));          // String 배열을 Set 으로 초기화
+        Set<String> alphabetSet = new HashSet<String>();                                 // 대문자 알파벳 -> 소문자 알파벳, 특수문자 제외를 위해 빈 Set 초기화
         Iterator<String> ir = wordSet.iterator();                                   // 순환자 생성
 
         while(ir.hasNext()){                                                        // 반복문
