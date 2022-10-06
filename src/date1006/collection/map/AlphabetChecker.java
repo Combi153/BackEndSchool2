@@ -14,9 +14,11 @@ public class AlphabetChecker {
     public static void main(String[] args) {
         AlphabetChecker alphabetChecker = new AlphabetChecker();
         HashMap<Character, Integer> alphabetMap = new HashMap<>();
-        for (char c = 'A'; c <= 'Z'; c++) {
+
+        for (char c = 'A'; c <= 'Z'; c++) { //공간복잡도가 높을 것 같다.
             alphabetMap.put(c, 0);
         }
+
         String s1 = "aa..bbcc//ddefg1123hijkk123aAAsdfakkk.llm".toUpperCase();
 
         for (int i = 0; i < s1.length(); i++){
