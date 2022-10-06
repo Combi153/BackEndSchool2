@@ -14,4 +14,14 @@ public class DirFileCheck {
             System.out.println(file);
         }
     }
+    /*
+    .\.git
+    .\.git
+    .\.gitignore
+    .\.idea
+    .\afile.txt
+    .\java-project-push-exercise.iml
+    .\out
+    .\src
+     */
 }
