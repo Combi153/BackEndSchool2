@@ -1,19 +1,11 @@
 package date1006.collection.map;
 
+import java.util.HashMap;
+
 public class AlphabetChecker {
 
-    public boolean isCapital(char character) {
-        System.out.println(character);
-        int characterCode = character;
-        if (characterCode >= 65 && characterCode <= 90){
-            return true;
-        }
-        return false;
-    }
-
     public boolean isAlphabet(char character) {
-        int characterCode = character;
-        if (characterCode >= 97 && characterCode <= 122){
+        if ((character >= 'A' && character <= 'Z') || (character >= 'a' && character <= 'z')){
             return true;
         }
         return false;
@@ -21,9 +13,19 @@ public class AlphabetChecker {
 
     public static void main(String[] args) {
         AlphabetChecker alphabetChecker = new AlphabetChecker();
+        HashMap<Character, Integer> alphabetMap = new HashMap<>();
+        for (char c = 'A'; c <= 'Z'; c++) {
+            alphabetMap.put(c, 0);
+        }
+        String s1 = "aa..bbcc//ddefg1123hijkk123aAAsdfakkk.llm".toUpperCase();
 
-        String s1 = "aabbccddefghijkkkkkllm";
-        System.out.println(alphabetChecker.isCapital(s1.charAt(4)));
-        System.out.println(alphabetChecker.isAlphabet(s1.charAt(4)));
+        for (int i = 0; i < s1.length(); i++){
+            char character = s1.charAt(i);
+            boolean isAlphabet = alphabetChecker.isAlphabet(character);
+            if (isAlphabet){
+                alphabetMap.put(character, alphabetMap.get(character) + 1);
+            }
+        }
+        System.out.println(alphabetMap);
     }
 }
