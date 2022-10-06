@@ -1,4 +1,4 @@
-package date1006.collection.set;
+package date1006.collection.set.ex2_randomnumber;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,11 +9,9 @@ public class RndNumbersWithoutDuplicated {
         Set<Integer> randomNumberSet = new HashSet<>();
 
         for (int i = 0; i < 50; i++){
-            randomNumberSet.add(randomNumberGenerator.generate(10));
+            randomNumberSet.add(randomNumberGenerator.generate(100));
         }
-        for (Integer integer : randomNumberSet) {
-            System.out.println(integer);
-        }
+        System.out.println(randomNumberSet);
         System.out.println("집합 사이즈 : " + randomNumberSet.size());
 
     }

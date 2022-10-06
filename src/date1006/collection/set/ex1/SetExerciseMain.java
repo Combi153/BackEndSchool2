@@ -1,4 +1,4 @@
-package date1006.collection.set;
+package date1006.collection.set.ex1;
 
 import java.util.HashSet;
 import java.util.Set;
