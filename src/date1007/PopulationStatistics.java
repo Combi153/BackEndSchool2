@@ -1,10 +1,11 @@
 package date1007;
 
-import java.awt.*;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PopulationStatistics {
     public void readByLine2(String filename) {
@@ -20,7 +21,6 @@ public class PopulationStatistics {
         }
     }
 
-
     public void readByCharacter(String fileName) throws IOException {
         FileReader fileReader = new FileReader(fileName); //파일 읽지 않는다.
 
@@ -32,14 +32,18 @@ public class PopulationStatistics {
         System.out.println(fileContents);
     }
 
-    public void readByLine(String fileName) throws IOException {
+    public List<PopulationMove> readByLine(String fileName) throws IOException { //다른 타입으로 하려면 어케 해야하나
+        List<PopulationMove> pml = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(fileName));
 
         String str;
         while ((str = br.readLine()) != null) {
-            System.out.println(str);
+            //System.out.println(str);
+            PopulationMove pm = parse(str);
+            pml.add(pm);
         }
         br.close();
+        return pml;
     }
 
     public String readLine(String fileName) throws IOException {
@@ -50,18 +54,20 @@ public class PopulationStatistics {
     }
 
     public PopulationMove parse(String data){
-        //0, 6
+
         String[] dataList = data.split(",");
-        int fromSido = Integer.parseInt(dataList[0]);
-        int toSido = Integer.parseInt(dataList[6]);
+        int toSido = Integer.parseInt(dataList[0]); //전입
+        int fromSido = Integer.parseInt(dataList[6]); //전출
+        //System.out.println(fromSido + " " + toSido);
         return new PopulationMove(fromSido, toSido);
     }
 
-
-    public static void main(String[] args) throws IOException {
-        String address = "C:\\Users\\chanmin\\Desktop\\인구관련연간자료_20221007_10150_데이터\\2021_인구관련연간자료_20221007_10150.csv";
-        PopulationStatistics populationStatistics = new PopulationStatistics();
-        //populationStatistics.readByLine2(address);
-        populationStatistics.parse(populationStatistics.readLine(address));
+    public void createAFile(String filename) {
+        File file = new File(filename);
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
