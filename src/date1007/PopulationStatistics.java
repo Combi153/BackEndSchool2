@@ -54,9 +54,9 @@ public class PopulationStatistics {
         String[] dataList = data.split(",");
         int fromSido = Integer.parseInt(dataList[0]);
         int toSido = Integer.parseInt(dataList[6]);
-        System.out.println(fromSido + " " + toSido);
         return new PopulationMove(fromSido, toSido);
     }
+
 
     public static void main(String[] args) throws IOException {
         String address = "C:\\Users\\chanmin\\Desktop\\인구관련연간자료_20221007_10150_데이터\\2021_인구관련연간자료_20221007_10150.csv";
