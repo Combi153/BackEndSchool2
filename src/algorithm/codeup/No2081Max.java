@@ -17,6 +17,6 @@ public class No2081Max {
             }
         }
         System.out.println(max);
-        System.out.println(idx);
+        System.out.println(idx + 1);
     }
 }
