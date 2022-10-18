@@ -1,5 +1,7 @@
 package algorithm.codeup;
 
+import java.util.Scanner;
+
 public class No1859Recursive {
 
     String stars;
@@ -17,6 +19,8 @@ public class No1859Recursive {
 
     public static void main(String[] args) {
         No1859Recursive recursive = new No1859Recursive();
-        recursive.printStar(5);
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(recursive.printStar(n));
     }
 }
